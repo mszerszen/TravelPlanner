@@ -1,9 +1,153 @@
-<Window xmlns="https://github.com/avaloniaui"
+<Window 
+        xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" 
+        
+        d:DesignWidth="800" 
+        d:DesignHeight="450"
+        Title="Travel Planner"
+        WindowState="Maximized"
+        
+        Padding="30"
+        
         x:Class="Zadanie1.MainWindow"
-        Title="Zadanie1">
-    Welcome to Avalonia!
+        >
+    
+        <ScrollViewer
+                HorizontalAlignment="Center"
+                HorizontalScrollBarVisibility="Auto"
+                >
+                <Grid>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Row="0" Grid.Column="0"
+                                   Text="Imię i Nawisko"
+                                   TextAlignment="Right"
+                                   
+                                   Padding="10"
+                                   Margin="10"
+                                   />
+                        <TextBox  Grid.Row="0" Grid.Column="1"
+                                  Name="NameSurname"
+                                  
+                                  Padding="10"
+                                  Margin="10"
+                                />
+                        <TextBlock Grid.Row="1" Grid.Column="0"
+                                   Text="Kraj Docelowy"
+                                   TextAlignment="Right"
+                                   
+                                   Padding="10"
+                                   Margin="10"
+                                />
+                        <ComboBox Grid.Row="1" Grid.Column="1" 
+                                  Name="Country"
+                                  
+                                  Padding="10"
+                                  Margin="10"
+                                  >
+                                <ComboBoxItem Content="Australia" />
+                                <ComboBoxItem Content="Chorwacja" />
+                                <ComboBoxItem Content="Cypr" />
+                                <ComboBoxItem Content="Dominikana" />
+                                <ComboBoxItem Content="Dubaj (Zjednoczone Emiraty Arabskie)" />
+                                <ComboBoxItem Content="Egipt" />
+                                <ComboBoxItem Content="Francja" />
+                                <ComboBoxItem Content="Grecja" />
+                                <ComboBoxItem Content="Hiszpania" />
+                                <ComboBoxItem Content="Indie" />
+                                <ComboBoxItem Content="Indonezja (Bali)" />
+                                <ComboBoxItem Content="Kenia" />
+                                <ComboBoxItem Content="Kuba" />
+                                <ComboBoxItem Content="Malediwy" />
+                                <ComboBoxItem Content="Malta" />
+                                <ComboBoxItem Content="Maroko" />
+                                <ComboBoxItem Content="Nowa Zelandia" />
+                                <ComboBoxItem Content="Portugalia" />
+                                <ComboBoxItem Content="Stany Zjednoczone (Hawaje)" />
+                                <ComboBoxItem Content="Tajlandia" />
+                                <ComboBoxItem Content="Turcja" />
+                                <ComboBoxItem Content="USA" />
+                                <ComboBoxItem Content="Wielka Brytania" />
+                                <ComboBoxItem Content="Wietnam" />
+                                <ComboBoxItem Content="Włochy" />
+                        </ComboBox>
+                        <TextBlock Grid.Row="2" Grid.Column="0" 
+                                   Text="Atrakcje"
+                                   TextAlignment="Right"
+                                   
+                                   Padding="10"
+                                   Margin="10"
+                                />
+                        <StackPanel Grid.Row="2" Grid.Column="1"
+                                    Margin="10"
+                                >
+                                <CheckBox Content="Muzea" Name="AttractionsMusea" />
+                                <CheckBox Content="Parki Narodowe" Name="AttractionsNationalParks" />
+                                <CheckBox Content="Zabytki" Name="AttractionsMonuments" />
+                                <CheckBox Content="Restauracje" Name="AttractionsRestaurants" />
+                                <CheckBox Content="Galerie sztuki" Name="AttractionsGalleries" />
+                                <CheckBox Content="Festiwale i koncerty" Name="AttractionsFestivals" />
+                        </StackPanel>
+                        <TextBlock Grid.Row="3" Grid.Column="0" 
+                                   Text="Środek Transportu"
+                                   TextAlignment="Right"
+                                   
+                                   Padding="10"
+                                   Margin="10"
+                        />
+                        <StackPanel Grid.Row="3" Grid.Column="1"
+                                    Margin="10"
+                        >
+                                <RadioButton GroupName="Commute"
+                                             Content="Samolot"
+                                        />
+                                <RadioButton GroupName="Commute"
+                                             Content="Samochód"
+                                />
+                                <RadioButton GroupName="Commute"
+                                             Content="Pociąg"
+                                />
+                                <RadioButton GroupName="Commute"
+                                             Content="Statek"
+                                />
+                        </StackPanel>
+                        <TextBlock Grid.Row="4" Grid.Column="0" 
+                                   Text="Miasta do Odwiedzenia"
+                                   TextAlignment="Right"
+                                   
+                                   Padding="10"
+                                   Margin="10"
+                        />
+                        <StackPanel Grid.Row="4" Grid.Column="1"
+                                    Margin="10"
+                        >
+                                <ListBox 
+                                        Name="Cities"
+                                        SelectionMode="Multiple"
+                                        />
+                                <StackPanel 
+                                        Orientation="Horizontal"
+                                        
+                                        Margin="0, 10, 0, 0"
+                                        >
+                                        <TextBox Name="City" Margin="0, 0, 15, 0" />
+                                        <Button Content="Dodaj Miasto" Click="Button_OnClick" />
+                                </StackPanel>
+                        </StackPanel>
+                </Grid>
+        </ScrollViewer>
+        
 </Window>
