@@ -26,3 +26,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/marce/Documents/Lekcje/Zadania/PAD/Zadanie1/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/marce/Documents/Lekcje/Zadania/PAD/Zadanie1/ResultWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" 
+        mc:Ignorable="d"
         
         d:DesignWidth="800" 
         d:DesignHeight="450"
@@ -21,6 +21,9 @@
                 >
                 <Grid>
                         <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
@@ -57,6 +60,8 @@
                                   
                                   Padding="10"
                                   Margin="10"
+                                  
+                                  SelectionChanged="Country_OnSelectionChanged"
                                   >
                                 <ComboBoxItem Content="Australia" />
                                 <ComboBoxItem Content="Chorwacja" />
@@ -93,13 +98,15 @@
                                 />
                         <StackPanel Grid.Row="2" Grid.Column="1"
                                     Margin="10"
+                                    
+                                    Name="CheckboxPanel"
                                 >
-                                <CheckBox Content="Muzea" Name="AttractionsMusea" />
-                                <CheckBox Content="Parki Narodowe" Name="AttractionsNationalParks" />
-                                <CheckBox Content="Zabytki" Name="AttractionsMonuments" />
-                                <CheckBox Content="Restauracje" Name="AttractionsRestaurants" />
-                                <CheckBox Content="Galerie sztuki" Name="AttractionsGalleries" />
-                                <CheckBox Content="Festiwale i koncerty" Name="AttractionsFestivals" />
+                                <CheckBox Content="Muzea" Name="AttractionsMusea" Click="UpdatePrice" />
+                                <CheckBox Content="Parki Narodowe" Name="AttractionsNationalParks" Click="UpdatePrice" />
+                                <CheckBox Content="Zabytki" Name="AttractionsMonuments" Click="UpdatePrice" />
+                                <CheckBox Content="Restauracje" Name="AttractionsRestaurants" Click="UpdatePrice" />
+                                <CheckBox Content="Galerie sztuki" Name="AttractionsGalleries" Click="UpdatePrice" />
+                                <CheckBox Content="Festiwale i koncerty" Name="AttractionsFestivals" Click="UpdatePrice" />
                         </StackPanel>
                         <TextBlock Grid.Row="3" Grid.Column="0" 
                                    Text="Środek Transportu"
@@ -110,18 +117,28 @@
                         />
                         <StackPanel Grid.Row="3" Grid.Column="1"
                                     Margin="10"
+                                    
+                                    Name="RadioGroup1"
                         >
                                 <RadioButton GroupName="Commute"
                                              Content="Samolot"
+                                             Name="Plane"
+                                             Click="UpdatePrice"
                                         />
                                 <RadioButton GroupName="Commute"
                                              Content="Samochód"
+                                             Name="Car"
+                                             Click="UpdatePrice"
                                 />
                                 <RadioButton GroupName="Commute"
                                              Content="Pociąg"
+                                             Name="Train"
+                                             Click="UpdatePrice"
                                 />
                                 <RadioButton GroupName="Commute"
                                              Content="Statek"
+                                             Name="Ship"
+                                             Click="UpdatePrice"
                                 />
                         </StackPanel>
                         <TextBlock Grid.Row="4" Grid.Column="0" 
@@ -137,6 +154,7 @@
                                 <ListBox 
                                         Name="Cities"
                                         SelectionMode="Multiple"
+                                        SelectionChanged="UpdatePrice"
                                         />
                                 <StackPanel 
                                         Orientation="Horizontal"
@@ -147,7 +165,9 @@
                                         <Button Content="Dodaj Miasto" Click="Button_OnClick" />
                                 </StackPanel>
                         </StackPanel>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Name="PriceBlock" TextAlignment="Center" Margin="0, 20, 0, 0" />
+                        <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_OnClick_v2" Content="Zamów Wycieczkę" HorizontalAlignment="Center" Margin="0, 20" />
+                        <Image Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Name="ImgCountry" Width="400" />
                 </Grid>
         </ScrollViewer>
-        
 </Window>
