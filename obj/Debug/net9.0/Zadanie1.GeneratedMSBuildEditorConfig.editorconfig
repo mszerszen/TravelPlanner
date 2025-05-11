@@ -15,17 +15,17 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Zadanie1
-build_property.ProjectDir = C:\Users\marce\Documents\Lekcje\Zadania\PAD\Zadanie1\
+build_property.ProjectDir = C:\Users\wikto\Desktop\TravelPlanner\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/marce/Documents/Lekcje/Zadania/PAD/Zadanie1/App.axaml]
+[C:/Users/wikto/Desktop/TravelPlanner/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marce/Documents/Lekcje/Zadania/PAD/Zadanie1/MainWindow.axaml]
+[C:/Users/wikto/Desktop/TravelPlanner/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/marce/Documents/Lekcje/Zadania/PAD/Zadanie1/ResultWindow.axaml]
+[C:/Users/wikto/Desktop/TravelPlanner/ResultWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
