@@ -1,4 +1,7 @@
-﻿using Avalonia.Controls;
+﻿using System;
+using System.IO;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
 
 namespace Zadanie1
 {
@@ -13,6 +16,12 @@ namespace Zadanie1
                            $"Transport: {transport}\n" +
                            $"Miasta: {cities}\n" +
                            $"Data: {date}";
+        }
+
+        private void Button_OnClick(object? sender, RoutedEventArgs e) {
+            var filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "result.txt");
+            using var writer = new StreamWriter(filePath);
+            writer.Write(Summary.Text);
         }
     }
 }

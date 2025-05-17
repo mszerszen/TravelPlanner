@@ -6,5 +6,16 @@
     WindowState="Maximized"
     Padding="30">
     
-    <TextBlock Name="Summary" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"/>
+    <StackPanel
+        Orientation="Vertical"
+        >
+        
+        <TextBlock Name="Summary" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="20" Margin="0, 50"/>
+        <Button 
+            Content="Zapisz do Pliku"
+            Click="Button_OnClick"
+            HorizontalAlignment="Center"
+            />
+        
+    </StackPanel>
 </Window>
