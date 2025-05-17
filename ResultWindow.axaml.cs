@@ -1,18 +1,18 @@
-﻿using System;
-using Avalonia.Controls;
-using Avalonia.Interactivity;
-using Avalonia.Media.Imaging;
-using Avalonia.Platform;
+﻿using Avalonia.Controls;
 
-namespace Zadanie1;
+namespace Zadanie1
+{
+    public partial class ResultWindow : Window
+    {
+        public ResultWindow(string country, string attractions, string transport, string cities, string date)
+        {
+            InitializeComponent();
 
-public partial class ResultWindow : Window {
-    public ResultWindow(string Country, string Attractions, string CommuteType, string Cities) {
-        InitializeComponent();
-        
-        Summary.Text = $"Kraj: {Country}\n" +
-                       $"Atrakcje: {Attractions}\n" +
-                       $"Środek Transportu: {CommuteType}\n" +
-                       $"Miasta: {Cities}";
+            Summary.Text = $"Kraj: {country}\n" +
+                           $"Atrakcje: {attractions}\n" +
+                           $"Transport: {transport}\n" +
+                           $"Miasta: {cities}\n" +
+                           $"Data: {date}";
+        }
     }
 }
